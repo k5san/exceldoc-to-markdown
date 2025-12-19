@@ -1,3 +1,8 @@
+# exceldoc_to_markdown
+
+Excelで書かれているドキュメント（表計算ソフトではなくドキュメント生成アプリとしてExcelを使っているタイプのファイル）を、シート毎にMarkdownにしつつ、中に入っている画像ファイルも取り出すツールです。  
+Windows環境想定。
+
 # 前提
 Pythonの実行環境とuvのインストールが必要となります。
 
@@ -8,7 +13,7 @@ pip install uv
 
 # 構成
 
-``
+```
 uv_workspace/
 ├─ pyproject.toml                   ← ワークスペース定義
 ├─ sync_all.ps1                     ← ワークスペース内の全てのプロジェクトに関して依存関係を更新する。
@@ -94,17 +99,4 @@ uv --native-tls --active add <パッケージ名>
 
 ## ビルドに関して
 
-pyInstallerを使用して実行形式ファイルにする。
-
-実行ファイル形式にする場合、動作環境のOS、プロセッサアーキテクチャ毎にビルドする必要があります。  
-Pyinstallerの場合Windows上でビルドしようとした場合Windows向けにしかビルドできないため、Linux向けにビルドする場合、docker上でビルドを行う必要がある。
-
-linux実行環境にて次のコマンドでプロセッサの種類を調べ、種類毎にビルドスクリプトを実行する。
-
-```
-uname -m
-```
-
-- windows         -> build_windows.ps1
-- linux + aarch64 -> build_linux_arm64.ps1
-- linux + x86_64  -> build_linux_amd64.ps1
+build_windows.ps1を実行するとPyInstallerによってexe化されます。
