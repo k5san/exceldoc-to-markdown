@@ -1,12 +1,14 @@
 [project]
-name = "script-tool"
-version = "0.1.0"
-description = "スクリプトツール"
+name = "exceldoc-to-markdown"
+version = "1.0.0"
+description = "ExcelDoc->Markdown変換ツール"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "common-lib",
     "mypy>=1.18.2",
+    "openpyxl>=3.1.5",
+    "pillow>=11.0.0",
 ]
 
 [tool.uv.sources]
