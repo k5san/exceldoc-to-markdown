@@ -1,0 +1,10 @@
+mode: 1
+
+postgresqlDirectory : "C:/Program Files/PostgreSQL/13/bin"
+flywayExePath : "C:/devtool/flyway/flyway.cmd"
+
+migrationSchemas:
+- "public"
+- "migration"
+- "itsp"
+- "eigyo"

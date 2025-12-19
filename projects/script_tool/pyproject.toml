@@ -1,0 +1,18 @@
+[project]
+name = "script-tool"
+version = "0.1.0"
+description = "スクリプトツール"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "common-lib",
+    "mypy>=1.18.2",
+]
+
+[tool.uv.sources]
+common-lib = { workspace = true }
+
+[dependency-groups]
+dev = [
+    "pyinstaller>=6.15.0",
+]

@@ -1,0 +1,12 @@
+[project]
+name = "common-lib"
+version = "0.1.0"
+description = "共通処理"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "mypy>=1.18.2",
+    "pyyaml>=6.0.2",
+    "types-pyyaml>=6.0.12.20250915",
+    "chardet>=5.2.0",
+]
